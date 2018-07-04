@@ -11,11 +11,12 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 
 public class PictoListAdapter extends ArrayAdapter<Picto> {
 
     private final LayoutInflater inflater;
-    private HashSet<Picto> pictos = new HashSet<>();
+    private HashSet<Picto> pictos = new LinkedHashSet<>();
     private int selectedPosition = -1;
 
     public int getSelectedPosition() {
