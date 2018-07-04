@@ -1,17 +1,21 @@
 package com.refugeye;
 
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+
 import android.content.ClipData;
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 
-import java.util.HashSet;
-import java.util.LinkedHashSet;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+
+import com.refugeye.data.model.Picto;
 
 public class PictoListAdapter extends ArrayAdapter<Picto> {
 
@@ -64,10 +68,16 @@ public class PictoListAdapter extends ArrayAdapter<Picto> {
         pictos.add(object);
     }
 
+    @Override
+    public void addAll(@NonNull Collection<? extends Picto> collection) {
+        super.addAll(collection);
+        pictos.addAll(collection);
+    }
+
     public void filter(String text) {
         clear();
         if (text.isEmpty()) {
-            addAll(pictos);
+            super.addAll(pictos);
             return;
         }
 
@@ -78,9 +88,11 @@ public class PictoListAdapter extends ArrayAdapter<Picto> {
     }
 
     private void nameLoop(String text, Picto picto) {
+        android.util.Log.d(getClass().getSimpleName(), "Searching: "+text);
         for (String name : picto.getNames()) {
+            android.util.Log.d(getClass().getSimpleName(), "Searching in "+name);
             if (name.toLowerCase().startsWith(text.toLowerCase())) {
-                add(picto);
+                super.add(picto);
                 return;
             }
         }

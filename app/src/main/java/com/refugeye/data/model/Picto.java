@@ -1,4 +1,4 @@
-package com.refugeye;
+package com.refugeye.data.model;
 
 import java.util.Arrays;
 import java.util.List;

@@ -1,0 +1,2586 @@
+[
+  {
+    "resId": "all_icons_01",
+    "names": [
+      "ONG",
+      "NGO",
+      "NVO - nevladna organizacija",
+      "منظمة غير حكومية",
+      "vabaühendus",
+      "ONG",
+      "ONG",
+      "НВО",
+      "ONG",
+      "NGO",
+      "非政府组织机构",
+      "ΜΚΟ"
+    ]
+  },
+  {
+    "resId": "all_icons_02",
+    "names": [
+      "argent",
+      "money",
+      "denar",
+      "مال",
+      "raha",
+      "dinero",
+      "dinheiro",
+      "новац",
+      "i soldi",
+      "Geld",
+      "钱",
+      "χρἡματα"
+    ]
+  },
+  {
+    "resId": "all_icons_03",
+    "names": [
+      "don",
+      "gift",
+      "donacija",
+      "هبة مالية",
+      "annetus",
+      "donación",
+      "doação",
+      "поклон",
+      "donazione",
+      "Spende",
+      "捐款",
+      "δωρεἁ"
+    ]
+  },
+  {
+    "resId": "all_icons_04",
+    "names": [
+      "couverts",
+      "cutlery",
+      "pribor",
+      "أدوات المائدة",
+      "lauanõud",
+      "cubiertos",
+      "talheres",
+      "прибор за јело",
+      "le posate",
+      "Besteck",
+      "餐具",
+      "μαχαιροπἡρουνα"
+    ]
+  },
+  {
+    "resId": "all_icons_05",
+    "names": [
+      "nourriture",
+      "food",
+      "hrana",
+      "طعام",
+      "toit",
+      "comida",
+      "comida",
+      "храна",
+      "il cibo",
+      "Essen",
+      "食品",
+      "τροφἡ"
+    ]
+  },
+  {
+    "resId": "all_icons_06",
+    "names": [
+      "europe",
+      "europe",
+      "Europa",
+      "أوروبا",
+      "euroopa",
+      "Europa",
+      "europa",
+      "Европа",
+      "europa",
+      "Europa",
+      "欧洲",
+      "Ευρὡπη"
+    ]
+  },
+  {
+    "resId": "all_icons_07",
+    "names": [
+      "chrétien",
+      "Christian",
+      "katolik",
+      "مسيحي",
+      "kristlane",
+      "cristiano",
+      "cristão",
+      "хришћанин",
+      "cristiano",
+      "Christ",
+      "基督徒",
+      "Χριστιανὁς"
+    ]
+  },
+  {
+    "resId": "all_icons_08",
+    "names": [
+      "bible",
+      "bible",
+      "biblija",
+      "الكتاب المقدس",
+      "piibel",
+      "Biblia",
+      "bíblia",
+      "Библија",
+      "bibbia",
+      "Bibel",
+      "圣经",
+      "Βἱβλος"
+    ]
+  },
+  {
+    "resId": "all_icons_09",
+    "names": [
+      "menorah",
+      "menorah",
+      "menora",
+      "شمعدان",
+      "menora",
+      "candelero",
+      "candeeiro",
+      "јеврејски свећњак",
+      "candelabro",
+      "Menora",
+      "烛台",
+      "κηροπἡγιο"
+    ]
+  },
+  {
+    "resId": "all_icons_10",
+    "names": [
+      "islam",
+      "Islam",
+      "islam",
+      "إسلام",
+      "islam",
+      "islam",
+      "Islão",
+      "ислам",
+      "islam",
+      "Islam",
+      "伊斯兰教",
+      "Ισλἀμ"
+    ]
+  },
+  {
+    "resId": "all_icons_11",
+    "names": [
+      "juif",
+      "Jewish",
+      "žid",
+      "يهودي",
+      "juut",
+      "judío",
+      "judeu",
+      "Јеврејски",
+      "ebreo",
+      "jüdisch",
+      "犹太人",
+      "Εβραἱος"
+    ]
+  },
+  {
+    "resId": "all_icons_12",
+    "names": [
+      "traduction",
+      "translation",
+      "prevod",
+      "ترجمة",
+      "tõlge",
+      "traducción",
+      "tradução",
+      "превод",
+      "traduzione",
+      "Übersetzung",
+      "翻译",
+      "μετἁφραση"
+    ]
+  },
+  {
+    "resId": "all_icons_13",
+    "names": [
+      "passeport",
+      "passport",
+      "potni list",
+      "جواز سفر",
+      "pass",
+      "pasaporte",
+      "passaporte",
+      "пасош",
+      "passaporto",
+      "Pass",
+      "护照",
+      "διαβατἡριο"
+    ]
+  },
+  {
+    "resId": "all_icons_14",
+    "names": [
+      "canada",
+      "canada",
+      "Kanada",
+      "كندا",
+      "kanada",
+      "Canadá",
+      "canada",
+      "Канада",
+      "canada",
+      "Kanada",
+      "加拿大",
+      "Καναδἁς"
+    ]
+  },
+  {
+    "resId": "all_icons_15",
+    "names": [
+      "lesbienne",
+      "lesbian",
+      "lezbijka",
+      "مثليه",
+      "lesbi",
+      "lesbiana",
+      "lésbica",
+      "лезбијка",
+      "lesbica",
+      "lesbisch",
+      "女同性恋",
+      "λεσβἱα"
+    ]
+  },
+  {
+    "resId": "all_icons_16",
+    "names": [
+      "bébé",
+      "baby",
+      "dojenček",
+      "طفل",
+      "imik",
+      "bebé",
+      "bebé",
+      "беба",
+      "bambino",
+      "Baby",
+      "婴儿",
+      "μωρὁ"
+    ]
+  },
+  {
+    "resId": "all_icons_17",
+    "names": [
+      "poussette",
+      "stroller",
+      "voziček",
+      "عربة أطفال",
+      "käru",
+      "cochecito",
+      "carrinho",
+      "дечија колица",
+      "passeggino",
+      "Kinderwagen",
+      "儿童推车",
+      "καροτσἁκι"
+    ]
+  },
+  {
+    "resId": "all_icons_18",
+    "names": [
+      "protéger",
+      "protect",
+      "zavarovati",
+      "حماية",
+      "kaitsma",
+      "proteger",
+      "proteger",
+      "заштитити",
+      "proteggere",
+      "schützen",
+      "保护",
+      "προστατεὑω"
+    ]
+  },
+  {
+    "resId": "all_icons_19",
+    "names": [
+      "grossesse",
+      "pregnancy",
+      "nosečnost",
+      "حمل",
+      "rasedus",
+      "embarazo",
+      "gravidez",
+      "трудноћа",
+      "gravidanza",
+      "Schwangerschaft",
+      "怀孕",
+      "εγγυμοσὑνη"
+    ]
+  },
+  {
+    "resId": "all_icons_20",
+    "names": [
+      "parent",
+      "relative",
+      "starši",
+      "أهل",
+      "vanemad",
+      "padres",
+      "pais",
+      "рођак",
+      "genitori",
+      "Eltern",
+      "父母",
+      "γονεἱς"
+    ]
+  },
+  {
+    "resId": "all_icons_21",
+    "names": [
+      "mariage",
+      "marriage",
+      "poroka",
+      "زواج",
+      "abielu",
+      "matrimonio",
+      "casamento",
+      "брак",
+      "matrimonio",
+      "Hochzeit",
+      "结婚",
+      "γἁμος"
+    ]
+  },
+  {
+    "resId": "all_icons_22",
+    "names": [
+      "maison",
+      "House",
+      "hiša",
+      "منزل",
+      "maja",
+      "casa",
+      "casa",
+      "кућа",
+      "casa",
+      "Haus",
+      "房屋",
+      "σπἱτι"
+    ]
+  },
+  {
+    "resId": "all_icons_23",
+    "names": [
+      "famille",
+      "family",
+      "družina",
+      "عائلة",
+      "perekond",
+      "familia",
+      "família",
+      "породица",
+      "famiglia",
+      "Familie",
+      "家庭",
+      "οικογἑνεια"
+    ]
+  },
+  {
+    "resId": "all_icons_24",
+    "names": [
+      "foyer",
+      "home",
+      "dom",
+      "مسكن",
+      "kodu",
+      "hogar",
+      "lar",
+      "дом",
+      "casa",
+      "Haushalt",
+      "家",
+      "οἱκος"
+    ]
+  },
+  {
+    "resId": "all_icons_25",
+    "names": [
+      "homosexuel",
+      "homosexual",
+      "homoseksualec",
+      "مثلي الجنس",
+      "homoseksuaal",
+      "homosexual",
+      "homossexual",
+      "хомосексуалац",
+      "omosessuale",
+      "homosexuel",
+      "同性恋",
+      "ομοφυλλὁφιλος"
+    ]
+  },
+  {
+    "resId": "all_icons_26",
+    "names": [
+      "fusil",
+      "gun",
+      "pištola",
+      "بندقية",
+      "tulirelv",
+      "pistola",
+      "espingarda",
+      "пиштољ",
+      "fucile",
+      "Gewehr",
+      "步枪",
+      "ντουφἑκι"
+    ]
+  },
+  {
+    "resId": "all_icons_27",
+    "names": [
+      "cagoule",
+      "balaclava",
+      "roparska kapa",
+      "قبعة قناع",
+      "kapuuts",
+      "pasamontañas",
+      "capuz",
+      "фанкомка",
+      "passamontagna",
+      "Kapuze",
+      "仅露两眼的风帽",
+      "κουκοὑλα"
+    ]
+  },
+  {
+    "resId": "all_icons_28",
+    "names": [
+      "terroriste",
+      "terrorist",
+      "terorist",
+      "إرهابي",
+      "terrorist",
+      "terrorista",
+      "terrorista",
+      "терориста",
+      "terrorista",
+      "Terrorist",
+      "恐怖分子",
+      "τρομοκρἁτης"
+    ]
+  },
+  {
+    "resId": "all_icons_29",
+    "names": [
+      "policier",
+      "police officer",
+      "policaj",
+      "شرطي",
+      "politseinik",
+      "policía",
+      "policial",
+      "полицајац",
+      "carabiniere",
+      "Polizist",
+      "警察",
+      "αστυνομικὁς"
+    ]
+  },
+  {
+    "resId": "all_icons_30",
+    "names": [
+      "interpellation",
+      "interpellation",
+      "interpelacija",
+      "إستجواب",
+      "ülekuulamine",
+      "interpelación",
+      "interpelaçao",
+      "испитивање",
+      "arresto",
+      "Festnahme",
+      "传讯",
+      "μεταγωγἡ"
+    ]
+  },
+  {
+    "resId": "all_icons_31",
+    "names": [
+      "milice",
+      "militia",
+      "milica",
+      "ميليشيا",
+      "",
+      "milicia",
+      "milícia",
+      "паравојна јединица",
+      "milizia",
+      "Bürgerwehr",
+      "民兵",
+      "στρατιωτικἑς δυνἁμεις"
+    ]
+  },
+  {
+    "resId": "all_icons_32",
+    "names": [
+      "militaire",
+      "military",
+      "vojaški",
+      "عسكري",
+      "sõjaväelane",
+      "militar",
+      "militar",
+      "војска",
+      "militare",
+      "Militär",
+      "军人",
+      "στρατιωτικὁς"
+    ]
+  },
+  {
+    "resId": "all_icons_33",
+    "names": [
+      "triste",
+      "sad",
+      "žalosten",
+      "حزين",
+      "kurb",
+      "triste",
+      "triste",
+      "тужан",
+      "triste",
+      "traurig",
+      "伤心",
+      "θλυμἑνος"
+    ]
+  },
+  {
+    "resId": "all_icons_34",
+    "names": [
+      "heureux",
+      "happy",
+      "vesel",
+      "سعيد",
+      "õnnelik",
+      "feliz",
+      "feliz",
+      "срећан",
+      "felice",
+      "glücklich",
+      "高兴",
+      "χαροὑμενος"
+    ]
+  },
+  {
+    "resId": "all_icons_35",
+    "names": [
+      "colère",
+      "anger",
+      "jeza",
+      "غاضب",
+      "vihane",
+      "enfadado",
+      "zangado",
+      "бесан",
+      "arrabbiato",
+      "wütend",
+      "生气",
+      "θυμωμἑνος"
+    ]
+  },
+  {
+    "resId": "all_icons_36",
+    "names": [
+      "malade",
+      "sick",
+      "bolan",
+      "مريض",
+      "haige",
+      "enfermo",
+      "doente",
+      "болестан",
+      "malato",
+      "krank",
+      "病",
+      "ἁρρωστος"
+    ]
+  },
+  {
+    "resId": "all_icons_37",
+    "names": [
+      "peur",
+      "fear",
+      "strah",
+      "خوف",
+      "hirm",
+      "miedo",
+      "medo",
+      "страх",
+      "paura",
+      "Angst",
+      "怕",
+      "φὁβος"
+    ]
+  },
+  {
+    "resId": "all_icons_38",
+    "names": [
+      "école",
+      "school",
+      "šola",
+      "مدرسة",
+      "kool",
+      "escuela",
+      "escola",
+      "школа",
+      "scuola",
+      "Schule",
+      "学校",
+      "σχολεἱο"
+    ]
+  },
+  {
+    "resId": "all_icons_39",
+    "names": [
+      "tribunal",
+      "court",
+      "sodišče",
+      "محكمة",
+      "kohus",
+      "corte",
+      "tribunal",
+      "суд",
+      "corte",
+      "Gericht",
+      "法院",
+      "δικαστἡριο"
+    ]
+  },
+  {
+    "resId": "all_icons_40",
+    "names": [
+      "diplôme",
+      "diploma",
+      "diploma",
+      "شهادة",
+      "diplom",
+      "diploma",
+      "diploma",
+      "диплома",
+      "diploma",
+      "Diplom",
+      "证书",
+      "δἱπλωμα"
+    ]
+  },
+  {
+    "resId": "all_icons_41",
+    "names": [
+      "banque",
+      "bank",
+      "banka",
+      "بنك",
+      "pank",
+      "banco",
+      "banco",
+      "банка",
+      "banca",
+      "Bank",
+      "银行",
+      "Τρἁπεζα"
+    ]
+  },
+  {
+    "resId": "all_icons_42",
+    "names": [
+      "télévision",
+      "TV",
+      "televizija",
+      "تلفزيون",
+      "televisioon",
+      "televisión",
+      "televisao",
+      "телевизор",
+      "televisione",
+      "Fernseher",
+      "电视",
+      "τηλεὁραση"
+    ]
+  },
+  {
+    "resId": "all_icons_43",
+    "names": [
+      "formulaire",
+      "form",
+      "obrazec",
+      "استمارة",
+      "vorm",
+      "forma",
+      "fomulário",
+      "формулар",
+      "modulo",
+      "Formular",
+      "表格",
+      "ἑντυπο"
+    ]
+  },
+  {
+    "resId": "all_icons_44",
+    "names": [
+      "journaliste",
+      "reporter",
+      "novinar",
+      "صحافي",
+      "ajakirjanik",
+      "periodista",
+      "jornalista",
+      "новинар",
+      "giornalista",
+      "Journalist",
+      "记者",
+      "δημοσιογρἁφος"
+    ]
+  },
+  {
+    "resId": "all_icons_45",
+    "names": [
+      "tente",
+      "tent",
+      "šotor",
+      "خيمة",
+      "telk",
+      "carpa / tienda campana",
+      "tenda",
+      "шатор",
+      "tenda",
+      "Zelt",
+      "帐篷",
+      "σκηνἡ"
+    ]
+  },
+  {
+    "resId": "all_icons_46",
+    "names": [
+      "garage",
+      "garage",
+      "garaža",
+      "مرأب",
+      "garaaž",
+      "garaje",
+      "garagem",
+      "гаража",
+      "garage",
+      "Werkstatt",
+      "车库",
+      "γκαρἁζ"
+    ]
+  },
+  {
+    "resId": "all_icons_47",
+    "names": [
+      "refuge",
+      "refuge",
+      "zavetišče",
+      "ملجأ",
+      "varjupaik",
+      "abrugi",
+      "refúgio",
+      "уточиште",
+      "rifugio",
+      "Zuflucht",
+      "庇护所",
+      "καταφὑγειο"
+    ]
+  },
+  {
+    "resId": "all_icons_48",
+    "names": [
+      "dehors",
+      "out",
+      "zunaj",
+      "خارج",
+      "väljas",
+      "fuera",
+      "exterior",
+      "напољу",
+      "fuori",
+      "außen",
+      "外面",
+      "ἑξω"
+    ]
+  },
+  {
+    "resId": "all_icons_49",
+    "names": [
+      "maison",
+      "House",
+      "hiša",
+      "بيت",
+      "maja",
+      "casa",
+      "casa",
+      "кућа",
+      "casa",
+      "Haus",
+      "房屋",
+      "σπἱτι"
+    ]
+  },
+  {
+    "resId": "all_icons_50",
+    "names": [
+      "eau",
+      "water",
+      "voda",
+      "ماء",
+      "vesi",
+      "agua",
+      "água",
+      "вода",
+      "aqua",
+      "Wasser",
+      "水",
+      "νερὁ"
+    ]
+  },
+  {
+    "resId": "all_icons_51",
+    "names": [
+      "soif",
+      "thirst",
+      "žejen",
+      "عطش",
+      "janu",
+      "sed",
+      "sede",
+      "жеђ",
+      "sete",
+      "Durst",
+      "渴",
+      "διψἁω"
+    ]
+  },
+  {
+    "resId": "all_icons_52",
+    "names": [
+      "électricité",
+      "electricity",
+      "elektrika",
+      "كهرباء",
+      "elekter",
+      "electricidad",
+      "eletricidade",
+      "струја",
+      "elettricità",
+      "Strom",
+      "电",
+      "ηλεκτρισμὁς"
+    ]
+  },
+  {
+    "resId": "all_icons_53",
+    "names": [
+      "infirmière",
+      "nurse",
+      "medicinska sestra",
+      "ممرضة",
+      "medõde",
+      "enfermera",
+      "enfermeira",
+      "медицинска сестра",
+      "infermiera",
+      "Krankenschwester",
+      "护士",
+      "νοσοκὁμα"
+    ]
+  },
+  {
+    "resId": "all_icons_54",
+    "names": [
+      "docteur",
+      "doctor",
+      "zdravnik",
+      "طبيب",
+      "arst",
+      "doctor",
+      "médico",
+      "доктор",
+      "medico",
+      "Arzt",
+      "医生",
+      "γιατρὁς"
+    ]
+  },
+  {
+    "resId": "all_icons_55",
+    "names": [
+      "sida",
+      "AIDS",
+      "AIDS",
+      "سيدا",
+      "AIDS",
+      "VIH",
+      "sida",
+      "СИДА",
+      "HIV",
+      "Aids",
+      "艾滋病",
+      "AIDS"
+    ]
+  },
+  {
+    "resId": "all_icons_56",
+    "names": [
+      "ambulance",
+      "ambulance",
+      "rešilec",
+      "سيارة إسعاف",
+      "kiirabi",
+      "ambulancia",
+      "ambulância",
+      "кола хитне помоћи",
+      "ambulanza",
+      "Ambulanz",
+      "救护车",
+      "ασθενοφὁρο"
+    ]
+  },
+  {
+    "resId": "all_icons_57",
+    "names": [
+      "hôpital",
+      "hospital",
+      "bolnišnica",
+      "مستشفى",
+      "haigla",
+      "hospital",
+      "hospital",
+      "болница",
+      "ospedale",
+      "Krankenhaus",
+      "医院",
+      "νοσοκομεἱο"
+    ]
+  },
+  {
+    "resId": "all_icons_58",
+    "names": [
+      "piqure",
+      "sting",
+      "pik",
+      "لسعة",
+      "süst",
+      "picadura",
+      "injeçao",
+      "жаока",
+      "puntura",
+      "Spritze",
+      "打针",
+      "ἑνεση"
+    ]
+  },
+  {
+    "resId": "all_icons_59",
+    "names": [
+      "pilule",
+      "pill",
+      "kontracepcijska",
+      "حبة دواء",
+      "tablett",
+      "píldora",
+      "pílula",
+      "пилула",
+      "pillola",
+      "Pille",
+      "药丸",
+      "χἁπι"
+    ]
+  },
+  {
+    "resId": "all_icons_60",
+    "names": [
+      "béquille",
+      "crutch",
+      "bergla",
+      "عكاز",
+      "kark",
+      "muleta",
+      "muletas",
+      "штака",
+      "stampella",
+      "Krücke",
+      "拐杖",
+      "μπαστοὑνι"
+    ]
+  },
+  {
+    "resId": "all_icons_61",
+    "names": [
+      "soleil",
+      "sun",
+      "sonce",
+      "شمس",
+      "päike",
+      "sol",
+      "sol",
+      "сунце",
+      "sole",
+      "Sonne",
+      "太阳",
+      "ἡλιος"
+    ]
+  },
+  {
+    "resId": "all_icons_62",
+    "names": [
+      "pluie",
+      "rain",
+      "dež",
+      "مطر",
+      "vihm",
+      "lluvia",
+      "chuva",
+      "киша",
+      "pioggia",
+      "Regen",
+      "雨",
+      "βροχἡ"
+    ]
+  },
+  {
+    "resId": "all_icons_63",
+    "names": [
+      "orage",
+      "storm",
+      "nevihta",
+      "عاصفة",
+      "torm",
+      "tormenta",
+      "trovoada",
+      "олуја",
+      "tempesta",
+      "Gewitter",
+      "暴风雨",
+      "καταιγἱδα"
+    ]
+  },
+  {
+    "resId": "all_icons_64",
+    "names": [
+      "lever",
+      "lift",
+      "sončni vzhod",
+      "فجر",
+      "koit",
+      "amanecer",
+      "madrugada",
+      "лифт",
+      "alba",
+      "Sonnenaufgang",
+      "日出",
+      "ξημἑρωμα"
+    ]
+  },
+  {
+    "resId": "all_icons_65",
+    "names": [
+      "coucher",
+      "sleep",
+      "sončni zahod",
+      "غروب",
+      "loojang",
+      "atardecer",
+      "pôr do sol",
+      "спавати",
+      "tramonto",
+      "Sonnenuntergang",
+      "日落",
+      "δὑση"
+    ]
+  },
+  {
+    "resId": "all_icons_66",
+    "names": [
+      "température",
+      "temperature",
+      "temperatura",
+      "درجة الحرارة",
+      "temperatuur",
+      "temperatura",
+      "temperatura",
+      "температура",
+      "temperatura",
+      "Temperatur",
+      "温度",
+      "θερμοκρασἱα"
+    ]
+  },
+  {
+    "resId": "all_icons_67",
+    "names": [
+      "froid",
+      "cold",
+      "mraz",
+      "برد",
+      "külm",
+      "frío",
+      "frio",
+      "хладноћа",
+      "freddo",
+      "kalt / Kälte",
+      "冷",
+      "κρὑο"
+    ]
+  },
+  {
+    "resId": "all_icons_68",
+    "names": [
+      "manifestation",
+      "demonstration",
+      "dogodek",
+      "مظاهرة",
+      "meeleavaldus",
+      "manifestación",
+      "manifestaçao",
+      "демонстрације",
+      "evento",
+      "Kundgebung",
+      "示威游行",
+      "διαμαρτυρἱα"
+    ]
+  },
+  {
+    "resId": "all_icons_69",
+    "names": [
+      "parler",
+      "speak",
+      "govoriti",
+      "تَكَلَّمَ",
+      "rääkima",
+      "hablar",
+      "falar",
+      "говорити",
+      "parlare",
+      "sprechen",
+      "说话",
+      "μιλἁω"
+    ]
+  },
+  {
+    "resId": "all_icons_70",
+    "names": [
+      "journal",
+      "newspaper",
+      "dnevnik",
+      "صحيفة",
+      "ajakiri",
+      "periódico",
+      "jornal",
+      "новине",
+      "giornale",
+      "Zeitung",
+      "报纸",
+      "εφημερἱδα"
+    ]
+  },
+  {
+    "resId": "all_icons_71",
+    "names": [
+      "grève de la faim",
+      "hunger strike",
+      "gladovna stavka",
+      "إضراب عن الطعام",
+      "näljastreik",
+      "huelgo de hambre",
+      "greve de fome",
+      "штрајк глађу",
+      "sciopero della fame",
+      "Hungerstreik",
+      "绝食",
+      "απεργεἱα πεἱνας"
+    ]
+  },
+  {
+    "resId": "all_icons_72",
+    "names": [
+      "libérer",
+      "free",
+      "osvoboditi",
+      "حرر",
+      "vabastama",
+      "liberar",
+      "libertar",
+      "слободан",
+      "rilaciare",
+      "befreien",
+      "释放",
+      "απελευθερὡνω"
+    ]
+  },
+  {
+    "resId": "all_icons_73",
+    "names": [
+      "torture",
+      "torture",
+      "mučenje",
+      "تعذيب",
+      "piinamine",
+      "tortura",
+      "tortura",
+      "мучење",
+      "tortura",
+      "Folter",
+      "酷刑",
+      "βασανηστἡριο"
+    ]
+  },
+  {
+    "resId": "all_icons_74",
+    "names": [
+      "violence",
+      "violence",
+      "nasilje",
+      "عنف",
+      "vägivald",
+      "violencia",
+      "violência",
+      "насиље",
+      "violenza",
+      "Gewalt",
+      "暴力",
+      "βἱα"
+    ]
+  },
+  {
+    "resId": "all_icons_75",
+    "names": [
+      "aveugle",
+      "blind",
+      "slep",
+      "أعمى",
+      "pine",
+      "ciego",
+      "cego",
+      "слеп",
+      "cieco",
+      "blind",
+      "盲",
+      "τυφλὁς"
+    ]
+  },
+  {
+    "resId": "all_icons_76",
+    "names": [
+      "censure",
+      "censorship",
+      "cenzura",
+      "رقابة",
+      "tsensuur",
+      "censura",
+      "censura",
+      "цензура",
+      "censura",
+      "Zensur",
+      "查禁",
+      "λογοκρισἱα"
+    ]
+  },
+  {
+    "resId": "all_icons_77",
+    "names": [
+      "ligoté",
+      "tied",
+      "zvezan",
+      "مربوط",
+      "kinni seotud",
+      "atado",
+      "atado",
+      "везан",
+      "legato",
+      "gefesselt",
+      "捆绑",
+      "δεμἑνος"
+    ]
+  },
+  {
+    "resId": "all_icons_78",
+    "names": [
+      "blessé",
+      "injured",
+      "poškodovan",
+      "مجروح",
+      "haavatud",
+      "herido",
+      "ferido",
+      "рањен",
+      "ferito",
+      "veletzt",
+      "伤员",
+      "τραυματισμἑνος"
+    ]
+  },
+  {
+    "resId": "all_icons_79",
+    "names": [
+      "menotté",
+      "handcuffed",
+      "vkljenjen",
+      "مكبل",
+      "käeraudades",
+      "esposado",
+      "algemada",
+      "у лисицама",
+      "ammanettato",
+      "Hanschellen angelegt",
+      "戴手铐",
+      "δεμἑνος με χειροπἑδες"
+    ]
+  },
+  {
+    "resId": "all_icons_80",
+    "names": [
+      "mutilé",
+      "disabled",
+      "pohabljen",
+      "معاق",
+      "sandistatud",
+      "mutilado",
+      "mutilar",
+      "инвалид",
+      "mutilato",
+      "verstümmelt",
+      "残疾人",
+      "ακρωτηριασμἑνος"
+    ]
+  },
+  {
+    "resId": "all_icons_81",
+    "names": [
+      "emprisonné",
+      "jailed",
+      "zaprt",
+      "مسجون",
+      "vangistatud",
+      "encarcelado",
+      "preso",
+      "ухапшен",
+      "incarcerato",
+      "gefangen",
+      "管进了监狱",
+      "φυλακισμἑνος"
+    ]
+  },
+  {
+    "resId": "all_icons_82",
+    "names": [
+      "supplice",
+      "torture",
+      "mučenje",
+      "تعذيب",
+      "piinamine",
+      "tortura",
+      "suplício",
+      "мучење",
+      "supplizio",
+      "Qual",
+      "刑",
+      "μαρτὐριο"
+    ]
+  },
+  {
+    "resId": "all_icons_83",
+    "names": [
+      "séquestré",
+      "locked",
+      "zapreti",
+      "المحتجزة",
+      "pantvangis hoitud",
+      "embargado",
+      "sequestrado",
+      "закључан",
+      "sequestrato",
+      "",
+      "非法监禁",
+      "υπὁ αναγκαστικὁ περιορισμὁ"
+    ]
+  },
+  {
+    "resId": "all_icons_84",
+    "names": [
+      "camion",
+      "truck",
+      "kamion",
+      "شاحنة",
+      "veoauto",
+      "camión",
+      "camião",
+      "камион",
+      "camion",
+      "Lastwagen",
+      "卡车",
+      "φορτηγὁ"
+    ]
+  },
+  {
+    "resId": "all_icons_85",
+    "names": [
+      "bus",
+      "bus",
+      "avtobus",
+      "حافلة",
+      "buss",
+      "bus",
+      "autocarro",
+      "аутобус",
+      "bus",
+      "Bus",
+      "公共汽车",
+      "λεωφορεἱο"
+    ]
+  },
+  {
+    "resId": "all_icons_86",
+    "names": [
+      "bateau",
+      "boat",
+      "ladja",
+      "باخرة",
+      "laev",
+      "barco",
+      "barco",
+      "брод",
+      "barca",
+      "Schiff",
+      "船",
+      "πλοἱο"
+    ]
+  },
+  {
+    "resId": "all_icons_87",
+    "names": [
+      "vagabond",
+      "vagrant",
+      "potepuh",
+      "متشرد",
+      "kodutu",
+      "vagabundo",
+      "vagabundo",
+      "луталица",
+      "vagabondo",
+      "Landstreicher",
+      "流浪者",
+      "στοὑς δρὁμους"
+    ]
+  },
+  {
+    "resId": "all_icons_88",
+    "names": [
+      "frontière",
+      "border",
+      "meja",
+      "حدود",
+      "piir",
+      "frontera",
+      "fronteira",
+      "граница",
+      "frontiera",
+      "Grenze",
+      "边境",
+      "σὑνορα"
+    ]
+  },
+  {
+    "resId": "all_icons_89",
+    "names": [
+      "clandestin",
+      "clandestine",
+      "prikrito",
+      "خفي",
+      "illegaalne immigrant",
+      "clandestino",
+      "clandestino",
+      "тајни",
+      "clandestino",
+      "blinder Passagier",
+      "偷渡者",
+      "λαθραἱος"
+    ]
+  },
+  {
+    "resId": "all_icons_90",
+    "names": [
+      "noyade",
+      "drowning",
+      "utopitev",
+      "غرق",
+      "uppumine",
+      "ahogamiento",
+      "afogamento",
+      "давити се",
+      "affogamento",
+      "Ertringen",
+      "溺水",
+      "πνιγμὁς"
+    ]
+  },
+  {
+    "resId": "all_icons_91",
+    "names": [
+      "avion",
+      "airplane",
+      "letalo",
+      "طائرة",
+      "lennuk",
+      "avión",
+      "avião",
+      "авион",
+      "aero",
+      "Flugzeug",
+      "飞机",
+      "αεροπλἁνο"
+    ]
+  },
+  {
+    "resId": "all_icons_92",
+    "names": [
+      "ouvrier",
+      "worker",
+      "delavec",
+      "عامل",
+      "tööline",
+      "obrero",
+      "operário",
+      "радник",
+      "operaio",
+      "Arbeiter",
+      "工人",
+      "εργἁτης"
+    ]
+  },
+  {
+    "resId": "all_icons_93",
+    "names": [
+      "paysan",
+      "peasant",
+      "kmet",
+      "مزارع",
+      "talumees/farmer",
+      "campesino",
+      "camponês",
+      "сељак",
+      "contadino",
+      "Bauer",
+      "农民",
+      "αγρὁτης"
+    ]
+  },
+  {
+    "resId": "all_icons_94",
+    "names": [
+      "travail",
+      "working",
+      "delo",
+      "عمل",
+      "töö",
+      "trabajo",
+      "trabalho",
+      "радити",
+      "lavoro",
+      "Arbeit",
+      "工作",
+      "δουλειἁ"
+    ]
+  },
+  {
+    "resId": "all_icons_95",
+    "names": [
+      "brouette",
+      "wheelbarrow",
+      "samokolnica",
+      "عربة يدوية",
+      "käru",
+      "carretilla",
+      "carrinho de mão",
+      "колица",
+      "carriola",
+      "Schubkarre",
+      "独轮车",
+      "χειρἁμαξα καρὀτσι"
+    ]
+  },
+  {
+    "resId": "all_icons_96",
+    "names": [
+      "outils",
+      "tools",
+      "orodja",
+      "أدوات",
+      "tööriistad",
+      "herramientas",
+      "ferramenta",
+      "алат",
+      "attrezzi",
+      "Werkzeuge",
+      "工具",
+      "εργαλεἱα"
+    ]
+  },
+  {
+    "resId": "all_icons2_01",
+    "names": [
+      "attaché",
+      "attached",
+      "zavezan",
+      "مرفق",
+      "atašee",
+      "unido",
+      "atado",
+      "закачено",
+      "attaccato",
+      "festgebunden",
+      "",
+      "δεμἑνος"
+    ]
+  },
+  {
+    "resId": "all_icons2_02",
+    "names": [
+      "afrique",
+      "africa",
+      "Afrika",
+      "أفريقيا",
+      "Aafrika",
+      "Africa",
+      "África",
+      "Африка",
+      "africa",
+      "afrikanisch",
+      "非洲",
+      "Αφρικἡ"
+    ]
+  },
+  {
+    "resId": "all_icons2_03",
+    "names": [
+      "menottes",
+      "handcuffs",
+      "vklenjen",
+      "أصفاد",
+      "käerauad",
+      "esposas",
+      "algemas",
+      "лисице",
+      "manette",
+      "Handschellen",
+      "手铐",
+      "χειροπἑδες"
+    ]
+  },
+  {
+    "resId": "all_icons2_04",
+    "names": [
+      "asie",
+      "asia",
+      "Azija",
+      "آسيا",
+      "Aasia",
+      "Asia",
+      "Ásia",
+      "Азија",
+      "asia",
+      "Asien",
+      "亚洲",
+      "Ασἱα"
+    ]
+  },
+  {
+    "resId": "all_icons2_05",
+    "names": [
+      "explosion",
+      "explosion",
+      "eksplozija",
+      "انفجار",
+      "plahvatus",
+      "explosión",
+      "explosão",
+      "експлозија",
+      "esplosione",
+      "Explosion",
+      "爆炸",
+      "ἑκρηξη"
+    ]
+  },
+  {
+    "resId": "all_icons2_06",
+    "names": [
+      "calendrier",
+      "calendar",
+      "koledar",
+      "روزنامه",
+      "kalender",
+      "calendario",
+      "calendário",
+      "календар",
+      "calendario",
+      "Kalender",
+      "日历",
+      "ημερολὁγιο"
+    ]
+  },
+  {
+    "resId": "all_icons2_07",
+    "names": [
+      "largage",
+      "dropping",
+      "spuščanje",
+      "إسقاط",
+      "",
+      "caída",
+      "largada por avião",
+      "испустити",
+      "(lancio ?)",
+      "Abwurf",
+      "空投",
+      "αποβολἡ λυμἁτων"
+    ]
+  },
+  {
+    "resId": "all_icons2_08",
+    "names": [
+      "attentat",
+      "attempt",
+      "atentat",
+      "اعتداء",
+      "atendaat",
+      "intento",
+      "atentado",
+      "покушати",
+      "attentato",
+      "Attentat",
+      "袭击事件",
+      "βομβιστικἡ επἱθεση"
+    ]
+  },
+  {
+    "resId": "all_icons2_09",
+    "names": [
+      "téléphone",
+      "phone",
+      "telefon",
+      "هاتف",
+      "telefon",
+      "teléfono",
+      "telefone",
+      "телефон",
+      "telefono",
+      "Telefon",
+      "电话",
+      "τηλἑφωνο"
+    ]
+  },
+  {
+    "resId": "all_icons2_10",
+    "names": [
+      "enfant",
+      "child",
+      "otrok",
+      "طفل",
+      "laps",
+      "niño",
+      "criança",
+      "дете",
+      "bambino",
+      "Kind",
+      "孩子",
+      "παιδἱ"
+    ]
+  },
+  {
+    "resId": "all_icons2_11",
+    "names": [
+      "réseau",
+      "network",
+      "omrežje",
+      "طفل",
+      "telefonivõrk",
+      "red",
+      "rede",
+      "мрежа",
+      "rete",
+      "Empfang",
+      "电话网络",
+      "τηλεφωνικὀ δἰκτυο"
+    ]
+  },
+  {
+    "resId": "all_icons2_12",
+    "names": [
+      "mort",
+      "dead",
+      "mrtev",
+      "شبكة",
+      "surm",
+      "muerto",
+      "morte",
+      "мртав",
+      "morto",
+      "Tod / tot",
+      "死人",
+      "νεκρὁς"
+    ]
+  },
+  {
+    "resId": "all_icons2_13",
+    "names": [
+      "chien",
+      "dog",
+      "pes",
+      "كلب",
+      "koer",
+      "perro",
+      "cão",
+      "пас",
+      "cane",
+      "Hund",
+      "狗",
+      "σκὑλος"
+    ]
+  },
+  {
+    "resId": "all_icons2_14",
+    "names": [
+      "courriel",
+      "Email",
+      "elektronska pošta",
+      "بريد الإلكتروني",
+      "post / e-mail",
+      "correo",
+      "E-mail",
+      "електронска пошта",
+      "mail",
+      "eMail",
+      "电子邮件",
+      "μἑιλ"
+    ]
+  },
+  {
+    "resId": "all_icons2_15",
+    "names": [
+      "europe",
+      "europe",
+      "Evropa",
+      "أوروبا",
+      "Euroopa",
+      "Europa",
+      "europa",
+      "Европа",
+      "europa",
+      "Europa",
+      "欧洲",
+      "Ευρὡπη"
+    ]
+  },
+  {
+    "resId": "all_icons2_16",
+    "names": [
+      "inondation",
+      "flooding",
+      "poplava",
+      "فيضانات",
+      "ujutus",
+      "inundación",
+      "inundação",
+      "поплава",
+      "alluvioni",
+      "Überschwemmung",
+      "水灾",
+      "πλυμμἡρα"
+    ]
+  },
+  {
+    "resId": "all_icons2_17",
+    "names": [
+      "refuser",
+      "refuse",
+      "zavrniti",
+      "رفض",
+      "keelduma, tagasi lükkama",
+      "rechazar",
+      "recusar",
+      "одбити",
+      "rifiutare",
+      "ablehnen",
+      "拒绝",
+      "αρνοὑμαι"
+    ]
+  },
+  {
+    "resId": "all_icons2_18",
+    "names": [
+      "bourse",
+      "scholarship",
+      "štipendija",
+      "منحة",
+      "toetus",
+      "beca",
+      "bolsa",
+      "стипендија",
+      "borsa",
+      "Börse",
+      "奖学金",
+      "χρηματηστἡριο"
+    ]
+  },
+  {
+    "resId": "all_icons2_19",
+    "names": [
+      "gaz",
+      "gas",
+      "plin",
+      "غاز",
+      "gaas",
+      "gas",
+      "gaz",
+      "бензин",
+      "gas",
+      "Gas",
+      "气体",
+      "αἑριο"
+    ]
+  },
+  {
+    "resId": "all_icons2_20",
+    "names": [
+      "arme",
+      "weapon",
+      "vojska",
+      "سلاح",
+      "relv",
+      "arma",
+      "arma",
+      "оружје",
+      "arma",
+      "Waffe",
+      "武器",
+      "ὁπλο"
+    ]
+  },
+  {
+    "resId": "all_icons2_21",
+    "names": [
+      "médecin",
+      "doctor",
+      "zdravnik",
+      "طبيب",
+      "arst",
+      "médico",
+      "médico",
+      "доктор",
+      "medico",
+      "Medikament",
+      "医生",
+      "γιατρὁς"
+    ]
+  },
+  {
+    "resId": "all_icons2_22",
+    "names": [
+      "feu",
+      "fire",
+      "ogenj",
+      "نار",
+      "tuli",
+      "fuego",
+      "fogo",
+      "ватра",
+      "fuoco",
+      "Feuer",
+      "火",
+      "φωτιἁ"
+    ]
+  },
+  {
+    "resId": "all_icons2_23",
+    "names": [
+      "justice",
+      "justice",
+      "pravica",
+      "عدالة",
+      "õiglus",
+      "justicia",
+      "justiça",
+      "правда",
+      "giustizia",
+      "Gerechtigkeit",
+      "公正",
+      "δικαιοσὑνη"
+    ]
+  },
+  {
+    "resId": "all_icons2_24",
+    "names": [
+      "mine",
+      "mine",
+      "rudnik",
+      "منجم",
+      "kaevandus",
+      "mina",
+      "mina",
+      "мина",
+      "miniera",
+      "Aussehen",
+      "矿",
+      "νἁρκη"
+    ]
+  },
+  {
+    "resId": "all_icons2_25",
+    "names": [
+      "secours",
+      "relief",
+      "pomoč",
+      "غاثة",
+      "abi",
+      "ayuda",
+      "socorros",
+      "помоћ",
+      "soccorso",
+      "Hilfe",
+      "救助",
+      "βοἡθεια"
+    ]
+  },
+  {
+    "resId": "all_icons2_26",
+    "names": [
+      "contrôle",
+      "control",
+      "kontrola",
+      "مراقبة",
+      "kontroll",
+      "control",
+      "controlo",
+      "контрола",
+      "controllo",
+      "Kontrolle",
+      "检查",
+      "ἑλεγχος"
+    ]
+  },
+  {
+    "resId": "all_icons2_27",
+    "names": [
+      "musique",
+      "music",
+      "glasba",
+      "موسيقى",
+      "muusika",
+      "música",
+      "música",
+      "музика",
+      "musica",
+      "Musik",
+      "音乐",
+      "μουσικἡ"
+    ]
+  },
+  {
+    "resId": "all_icons2_28",
+    "names": [
+      "apatride",
+      "stateless",
+      "brez državljanstva",
+      "بدون جنسية",
+      "",
+      "apátrida",
+      "apátrida",
+      "без државе",
+      "apolide",
+      "Staatenlos",
+      "无国籍的人",
+      "ἁπατρις"
+    ]
+  },
+  {
+    "resId": "all_icons2_29",
+    "names": [
+      "amérique",
+      "america",
+      "Amerika",
+      "أمريكا",
+      "ameerika",
+      "America",
+      "América",
+      "Америка",
+      "america",
+      "Amerika",
+      "美洲",
+      "Αμερικἡ"
+    ]
+  },
+  {
+    "resId": "all_icons2_30",
+    "names": [
+      "tente",
+      "attempted",
+      "šotor",
+      "خيمة",
+      "telk",
+      "carpa / tienda campana",
+      "tenda",
+      "покушао",
+      "tenda",
+      "Zelt",
+      "帐篷",
+      "σκηνἠ"
+    ]
+  },
+  {
+    "resId": "all_icons2_31",
+    "names": [
+      "monde",
+      "world",
+      "svet",
+      "عالم",
+      "maailm",
+      "mundo",
+      "mundo",
+      "свет",
+      "mondo",
+      "Welt",
+      "世界",
+      "κὁσμος"
+    ]
+  },
+  {
+    "resId": "all_icons2_32",
+    "names": [
+      "ecrire",
+      "write",
+      "pisati",
+      "كتابة",
+      "kirjutama",
+      "escribir",
+      "escrever",
+      "писати",
+      "scrivere",
+      "schreiben",
+      "写",
+      "γρἁφω"
+    ]
+  },
+  {
+    "resId": "all_icons2_33",
+    "names": [
+      "geneve",
+      "geneva",
+      "Ženeva",
+      "جنيف",
+      "Genova",
+      "Ginebra",
+      "Genebra",
+      "Женева",
+      "ginevra",
+      "Genf",
+      "日内瓦",
+      "Γενεὐη"
+    ]
+  },
+  {
+    "resId": "all_icons2_34",
+    "names": [
+      "colis",
+      "package",
+      "pošiljka",
+      "طرد بريدي",
+      "pakk",
+      "paquete",
+      "encomenda",
+      "пакет",
+      "pacco",
+      "Paket",
+      "邮包",
+      "δἑμα"
+    ]
+  },
+  {
+    "resId": "all_icons2_35",
+    "names": [
+      "salaire",
+      "salary",
+      "plača",
+      "راتب",
+      "palk",
+      "sueldo",
+      "salário",
+      "плата",
+      "stipendio",
+      "Gehalt",
+      "工资",
+      "μισθὁς"
+    ]
+  },
+  {
+    "resId": "all_icons2_36",
+    "names": [
+      "refugié",
+      "refugee",
+      "begunec",
+      "لاجئ",
+      "põgenik",
+      "refugiado",
+      "Refugiado",
+      "избеглица",
+      "profugo",
+      "Zuflucht gesucht",
+      "避难者",
+      "πρὁσφυγας"
+    ]
+  },
+  {
+    "resId": "all_icons2_37",
+    "names": [
+      "santé",
+      "health",
+      "zdravje",
+      "صحة",
+      "tervis",
+      "salud",
+      "Saúde",
+      "здравље",
+      "salute",
+      "Gesundheit",
+      "健康",
+      "υγεἱα"
+    ]
+  },
+  {
+    "resId": "all_icons2_38",
+    "names": [
+      "bateau",
+      "boat",
+      "ladja",
+      "باخرة",
+      "laev",
+      "barco",
+      "barco",
+      "брод",
+      "barca",
+      "Boot",
+      "船",
+      "πλοἱο"
+    ]
+  },
+  {
+    "resId": "all_icons2_39",
+    "names": [
+      "vieux",
+      "old",
+      "star",
+      "عجوز",
+      "vana",
+      "viejo",
+      "velho",
+      "стар",
+      "vecchio",
+      "alt",
+      "老",
+      "γἑρος"
+    ]
+  },
+  {
+    "resId": "all_icons2_40",
+    "names": [
+      "enceinte",
+      "pregnant",
+      "noseča",
+      "حامل",
+      "rase",
+      "embarazada",
+      "grávida",
+      "трудна",
+      "incinta",
+      "schwanger sein",
+      "怀孕",
+      "ἑγγυος"
+    ]
+  },
+  {
+    "resId": "all_icons2_41",
+    "names": [
+      "prisonnier",
+      "prisoner",
+      "zapornik",
+      "سجين",
+      "vang",
+      "prisionero",
+      "Prisioneiro",
+      "заробљеник",
+      "prigionero",
+      "Gefangener",
+      "俘虏",
+      "φυλακισμἑνος"
+    ]
+  },
+  {
+    "resId": "all_icons2_42",
+    "names": [
+      "camp",
+      "camp",
+      "zaporniški kamp",
+      "مخيم",
+      "vangilaager",
+      "campo",
+      "Acampamento",
+      "камп",
+      "campo carcerario",
+      "Lager",
+      "拘押营",
+      "στρατὁπεδο συγκἑντρωσης"
+    ]
+  },
+  {
+    "resId": "all_icons2_43",
+    "names": [
+      "radio",
+      "radio",
+      "radio",
+      "راديو",
+      "raadio",
+      "radio",
+      "rádio",
+      "радио",
+      "radio",
+      "Radio",
+      "收音机",
+      "ραδιὁφωνο"
+    ]
+  },
+  {
+    "resId": "all_icons2_44",
+    "names": [
+      "soldat",
+      "soldier",
+      "vojak",
+      "جندي",
+      "sõdur",
+      "soldado",
+      "Soldado",
+      "војник",
+      "soldato",
+      "Soldat",
+      "战士",
+      "στρατιὡτης"
+    ]
+  },
+  {
+    "resId": "all_icons2_45",
+    "names": [
+      "document",
+      "document",
+      "dokumenti",
+      "مستندات",
+      "dokumendid",
+      "documentos",
+      "documentos",
+      "документ",
+      "documenti",
+      "Papiere",
+      "文件",
+      "δημὁσια εγγραφα"
+    ]
+  },
+  {
+    "resId": "all_icons2_46",
+    "names": [
+      "riz",
+      "rice",
+      "riž",
+      "أرز",
+      "riis",
+      "arroz",
+      "Arroz",
+      "пиринач",
+      "riso",
+      "Reis",
+      "米饭",
+      "ρὑζι"
+    ]
+  },
+  {
+    "resId": "all_icons2_47",
+    "names": [
+      "CRS",
+      "police officer",
+      "specialci",
+      "شرطة مكافحة الشغب",
+      "KAPO",
+      "policía antidisturbios",
+      "PSP",
+      "полицајац",
+      "forze mobili",
+      "Spezialeinsatzkraft",
+      "宪兵",
+      "ΜΑΤ"
+    ]
+  },
+  {
+    "resId": "all_icons2_48",
+    "names": [
+      "route",
+      "road",
+      "cesta",
+      "طريق",
+      "tee",
+      "carretera",
+      "estrada",
+      "пут",
+      "strada",
+      "Straße",
+      "道路",
+      "δρὁμος"
+    ]
+  },
+  {
+    "resId": "all_icons2_49",
+    "names": [
+      "douche",
+      "shower",
+      "tuš",
+      "حمام",
+      "dušš",
+      "ducha",
+      "duche",
+      "туш",
+      "doccia",
+      "Dusche",
+      "洗澡",
+      "ντοὑζ"
+    ]
+  },
+  {
+    "resId": "all_icons2_50",
+    "names": [
+      "amerique du sud",
+      "South America",
+      "Južna amerika",
+      "أمريكا الجنوبية",
+      "Lõuna-Ameerika",
+      "America del Sur",
+      "América do Sul",
+      "Јужна Америка",
+      "sud america",
+      "Südamerika",
+      "南美洲",
+      "Νὁτια Αμερικἡ"
+    ]
+  },
+  {
+    "resId": "all_icons2_51",
+    "names": [
+      "tétine",
+      "pacifier",
+      "duda",
+      "لهاية",
+      "lutt",
+      "chupete",
+      "chupeta",
+      "цуцла",
+      "ciuccio",
+      "Schnuller",
+      "奶嘴",
+      "πιπἱλα"
+    ]
+  },
+  {
+    "resId": "all_icons2_52",
+    "names": [
+      "mirador",
+      "observation tower",
+      "opazovalni stolp",
+      "رج المراقبة",
+      "valvetorn",
+      "torre de observación",
+      "miradouro",
+      "осматрачка кула",
+      "torre di osservazione",
+      "Wachturm",
+      "瞭望塔",
+      "πύργος παρατήρησης"
+    ]
+  },
+  {
+    "resId": "all_icons2_53",
+    "names": [
+      "casque",
+      "helmet",
+      "čelada",
+      "خوذة",
+      "kiiver",
+      "casco",
+      "capacete",
+      "шлем",
+      "casco",
+      "Helm",
+      "盔",
+      "κρἁνος"
+    ]
+  },
+  {
+    "resId": "all_icons2_54",
+    "names": [
+      "village",
+      "town",
+      "vas",
+      "قرية",
+      "küla",
+      "pueblo",
+      "Aldeia",
+      "град",
+      "villaggio",
+      "Dorf",
+      "农村",
+      "χωριὁ"
+    ]
+  },
+  {
+    "resId": "all_icons2_55",
+    "names": [
+      "handicap",
+      "handicap",
+      "prizadet",
+      "إعاقة",
+      "puudega",
+      "handicap",
+      "deficiência",
+      "хендикеп",
+      "disabilità",
+      "Behinderung",
+      "残障",
+      "αναπηρἰα"
+    ]
+  },
+  {
+    "resId": "all_icons2_56",
+    "names": [
+      "wifi",
+      "WIFI",
+      "brezžična povezava",
+      "واي فاي",
+      "wifi",
+      "wifi",
+      "wi-fi",
+      "бежични интернет",
+      "wifi",
+      "WLAN",
+      "无线网络",
+      "ασὑρματο ἰντερνετ"
+    ]
+  }
+]
