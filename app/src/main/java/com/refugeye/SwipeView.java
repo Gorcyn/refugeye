@@ -27,7 +27,7 @@ public class SwipeView extends LinearLayout {
     @Override
     protected void onFinishInflate() {
         super.onFinishInflate();
-        toggle = (ImageView) findViewById(R.id.toggle_drawer);
+        toggle = findViewById(R.id.toggle_drawer);
         toggle.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,7 +59,6 @@ public class SwipeView extends LinearLayout {
 
     public int dpToPx(int dp) {
         DisplayMetrics displayMetrics = getContext().getResources().getDisplayMetrics();
-        int px = Math.round(dp * (displayMetrics.xdpi / DisplayMetrics.DENSITY_DEFAULT));
-        return px;
+        return Math.round(dp * (displayMetrics.xdpi / DisplayMetrics.DENSITY_DEFAULT));
     }
 }

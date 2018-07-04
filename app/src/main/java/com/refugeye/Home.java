@@ -1,12 +1,11 @@
 package com.refugeye;
 
+import java.util.Locale;
+
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.Canvas;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.DragEvent;
@@ -18,14 +17,14 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import java.util.Locale;
+import android.support.v7.app.AppCompatActivity;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class Home extends AppCompatActivity {
 
-    public DrawingView drawingView;
-    public ListView listView;
+    private DrawingView drawingView;
+    private ListView listView;
     private EditText search;
     private SwipeView swipeView;
     private View successOverlay;
@@ -37,17 +36,20 @@ public class Home extends AppCompatActivity {
 
         final PictoListAdapter pictoListAdapter = new PictoListAdapter(this);
 
-        drawingView = (DrawingView) findViewById(R.id.home_drawing_view);
+        drawingView = findViewById(R.id.home_drawing_view);
         drawingView.setupDrawing();
         drawingView.setOnDragListener(new View.OnDragListener() {
             @Override
             public boolean onDrag(View v, DragEvent event) {
 
                 if (event.getAction() == DragEvent.ACTION_DROP) {
-                    Bitmap bitmap = BitmapFactory.decodeResource(getResources(), pictoListAdapter.getItem(pictoListAdapter.selectedPosition).resId);
-                    bitmap = Bitmap.createScaledBitmap(bitmap, bitmap.getWidth() * 2, bitmap.getHeight() * 2, false);
-                    drawingView.addBitmap(bitmap, event.getX(), event.getY());
 
+                    Picto selectedPicto = pictoListAdapter.getItem(pictoListAdapter.getSelectedPosition());
+                    if (selectedPicto != null) {
+                        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), selectedPicto.getResId());
+                        bitmap = Bitmap.createScaledBitmap(bitmap, bitmap.getWidth() * 2, bitmap.getHeight() * 2, false);
+                        drawingView.addBitmap(bitmap, event.getX(), event.getY());
+                    }
                 }
                 if (event.getAction() == DragEvent.ACTION_DRAG_STARTED) {
                     swipeView.close();
@@ -56,9 +58,9 @@ public class Home extends AppCompatActivity {
             }
         });
 
-        swipeView = (SwipeView) findViewById(R.id.sliding_pannel);
+        swipeView = findViewById(R.id.sliding_pannel);
 
-        listView = (ListView) findViewById(R.id.home_picto_list);
+        listView = findViewById(R.id.home_picto_list);
 
 
         pictoListAdapter.add(new Picto(R.drawable.all_icons_01, new String[]{"ONG", "NGO", "NVO - nevladna organizacija", "منظمة غير حكومية", "vabaühendus", "ONG", "ONG", "НВО", "ONG", "NGO", "非政府组织机构", "ΜΚΟ"}));
@@ -214,9 +216,6 @@ public class Home extends AppCompatActivity {
         pictoListAdapter.add(new Picto(R.drawable.all_icons2_55, new String[]{"handicap", "handicap", "prizadet", "إعاقة", "puudega", "handicap", "deficiência", "хендикеп", "disabilità", "Behinderung", "残障", "αναπηρἰα"}));
         pictoListAdapter.add(new Picto(R.drawable.all_icons2_56, new String[]{"wifi", "WIFI", "brezžična povezava", "واي فاي", "wifi", "wifi", "wi-fi", "бежични интернет", "wifi", "WLAN", "无线网络", "ασὑρματο ἰντερνετ"}));
 
-
-
-
         listView.setAdapter(pictoListAdapter);
 
 
@@ -250,13 +249,15 @@ public class Home extends AppCompatActivity {
                 }, 500);
             }
         });
-        search = (EditText) findViewById(R.id.home_search);
+        search = findViewById(R.id.home_search);
         search.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 if (actionId == EditorInfo.IME_ACTION_SEARCH) {
                     InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-                    imm.hideSoftInputFromWindow(search.getWindowToken(), 0);
+                    if (imm != null) {
+                        imm.hideSoftInputFromWindow(search.getWindowToken(), 0);
+                    }
                     return true;
                 }
                 return false;
@@ -282,18 +283,8 @@ public class Home extends AppCompatActivity {
         });
     }
 
-    public Bitmap convertToBitmap(Drawable drawable, int widthPixels, int heightPixels) {
-        Bitmap mutableBitmap = Bitmap.createBitmap(widthPixels, heightPixels, Bitmap.Config.ARGB_8888);
-        Canvas canvas = new Canvas(mutableBitmap);
-        drawable.setBounds(0, 0, widthPixels, heightPixels);
-        drawable.draw(canvas);
-
-        return mutableBitmap;
-    }
-
     @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
-
 }

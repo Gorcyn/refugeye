@@ -3,21 +3,31 @@ package com.refugeye;
 import java.util.Arrays;
 import java.util.List;
 
+import android.support.annotation.DrawableRes;
+
 public class Picto {
 
-    public int resId;
-    public List<String> names;
-
-    public Picto(int resId) {
-        this.resId = resId;
-    }
+    private int resId;
+    private List<String> names;
 
     public Picto(int resId, String[] namesArray) {
         this.resId = resId;
         this.names = Arrays.asList(namesArray);
     }
-    public Picto(int resId, List<String> names) {
-        this.resId = resId;
-        this.names = names;
+
+    /**
+     * Return Picto resource id
+     * @return @DrawableRes int
+     */
+    public @DrawableRes int getResId() {
+        return resId;
+    }
+
+    /**
+     * Return Picto names
+     * @return List<String>
+     */
+    public List<String> getNames() {
+        return names;
     }
 }

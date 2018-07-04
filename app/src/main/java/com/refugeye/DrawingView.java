@@ -1,5 +1,11 @@
 package com.refugeye;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 import android.content.ContentValues;
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -13,19 +19,13 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Locale;
-
 public class DrawingView extends View {
 
-    public Path drawPath;
+    private Path drawPath;
     private Paint canvasPaint;
     private Bitmap canvasBitmap = null;
-    public Paint drawPaint;
-    public Canvas drawCanvas;
+    private Paint drawPaint;
+    private Canvas drawCanvas;
 
     public DrawingView(Context context) {
         super(context);
@@ -42,7 +42,6 @@ public class DrawingView extends View {
     public void setupDrawing() {
         drawPath = new Path();
         drawPaint = new Paint();
-
 
         drawPaint.setColor(getResources().getColor(R.color.orange_transp));
         drawPaint.setAntiAlias(true);
@@ -115,12 +114,14 @@ public class DrawingView extends View {
 
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("ddMMyyyyHHmmss", Locale.getDefault());
             File f = new File(filename, "Refugeye-" + simpleDateFormat.format(new Date()) + ".png");
-            f.createNewFile();
-            System.out.println("file created " + f.toString());
-            FileOutputStream out = new FileOutputStream(f);
-            Bitmap bitmap = canvasBitmap;
-            bitmap.compress(Bitmap.CompressFormat.PNG, 90, out);
-            addImageToGallery(f.getAbsolutePath(), context);
+            boolean filedCreated = f.createNewFile();
+            if (filedCreated) {
+                System.out.println("file created " + f.toString());
+                FileOutputStream out = new FileOutputStream(f);
+                Bitmap bitmap = canvasBitmap;
+                bitmap.compress(Bitmap.CompressFormat.PNG, 90, out);
+                addImageToGallery(f.getAbsolutePath(), context);
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }

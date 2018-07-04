@@ -2,6 +2,8 @@ package com.refugeye;
 
 import android.content.ClipData;
 import android.content.Context;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,15 +16,20 @@ public class PictoListAdapter extends ArrayAdapter<Picto> {
 
     private final LayoutInflater inflater;
     private HashSet<Picto> pictos = new HashSet<>();
-    public int selectedPosition = -1;
+    private int selectedPosition = -1;
+
+    public int getSelectedPosition() {
+        return selectedPosition;
+    }
 
     public PictoListAdapter(Context context) {
         super(context, 0);
         inflater = LayoutInflater.from(context);
     }
 
+    @NonNull
     @Override
-    public View getView(final int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         ViewHolder holder = null;
         if (convertView == null) {
             convertView = inflater.inflate(R.layout.r_picto, parent, false);
@@ -31,17 +38,21 @@ public class PictoListAdapter extends ArrayAdapter<Picto> {
         }
         holder = (ViewHolder) convertView.getTag();
 
-        holder.image.setImageResource(getItem(position).resId);
-        convertView.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View view) {
-                PictoListAdapter.this.selectedPosition = position;
-                ClipData data = ClipData.newPlainText("", "");
-                View.DragShadowBuilder shadowBuilder = new View.DragShadowBuilder(view);
-                view.startDrag(data, shadowBuilder, view, 0);
-                return true;
-            }
-        });
+        Picto picto = getItem(position);
+        if (picto != null) {
+
+            holder.image.setImageResource(picto.getResId());
+            convertView.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View view) {
+                    PictoListAdapter.this.selectedPosition = position;
+                    ClipData data = ClipData.newPlainText("", "");
+                    View.DragShadowBuilder shadowBuilder = new View.DragShadowBuilder(view);
+                    view.startDrag(data, shadowBuilder, view, 0);
+                    return true;
+                }
+            });
+        }
 
         return convertView;
     }
@@ -66,7 +77,7 @@ public class PictoListAdapter extends ArrayAdapter<Picto> {
     }
 
     private void nameLoop(String text, Picto picto) {
-        for (String name : picto.names) {
+        for (String name : picto.getNames()) {
             if (name.toLowerCase().startsWith(text.toLowerCase())) {
                 add(picto);
                 return;
@@ -78,7 +89,7 @@ public class PictoListAdapter extends ArrayAdapter<Picto> {
         public final ImageView image;
 
         public ViewHolder(View view) {
-            image = (ImageView) view.findViewById(R.id.picto_image);
+            image = view.findViewById(R.id.picto_image);
         }
     }
 }
