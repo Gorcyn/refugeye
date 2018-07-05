@@ -1,5 +1,7 @@
 package com.refugeye;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 
 import android.content.Context;
@@ -21,6 +23,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.refugeye.data.model.Picto;
 import com.refugeye.data.repository.PictoRepository;
+import com.refugeye.ui.pictoList.PictoListAdapter;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
@@ -32,10 +35,14 @@ public class Home extends AppCompatActivity {
     private SwipeView swipeView;
     private View successOverlay;
 
+    private PictoRepository repository;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        repository = new PictoRepository(this);
 
         final PictoListAdapter pictoListAdapter = new PictoListAdapter(this);
 
@@ -47,7 +54,7 @@ public class Home extends AppCompatActivity {
 
                 if (event.getAction() == DragEvent.ACTION_DROP) {
 
-                    Picto selectedPicto = pictoListAdapter.getItem(pictoListAdapter.getSelectedPosition());
+                    Picto selectedPicto = pictoListAdapter.getSelectedItem();
                     if (selectedPicto != null) {
                         Bitmap bitmap = BitmapFactory.decodeResource(getResources(), selectedPicto.getResId());
                         bitmap = Bitmap.createScaledBitmap(bitmap, bitmap.getWidth() * 2, bitmap.getHeight() * 2, false);
@@ -65,8 +72,10 @@ public class Home extends AppCompatActivity {
 
         listView = findViewById(R.id.home_picto_list);
 
-        PictoRepository repository = new PictoRepository(this);
-        pictoListAdapter.addAll(repository.getPictoList());
+        List<Picto> pictoList = repository.getPictoList();
+        if (pictoList != null) {
+            pictoListAdapter.addAll(pictoList);
+        }
         listView.setAdapter(pictoListAdapter);
 
 
@@ -117,19 +126,28 @@ public class Home extends AppCompatActivity {
         search.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
             }
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
             }
 
             @Override
             public void afterTextChanged(Editable s) {
                 String text = search.getText().toString().toLowerCase(Locale.getDefault());
-                pictoListAdapter.filter(text);
 
+                List<Picto> pictoList = null;
+                // If input is empty, present nothing until something is typed
+                if (!text.isEmpty()) {
+                    pictoList = repository.findWithNameContaining(text);
+                }
+
+                if (pictoList == null) {
+                    pictoList = new ArrayList<>();
+                }
+                pictoListAdapter.clear();
+                pictoListAdapter.addAll(pictoList);
+                pictoListAdapter.notifyDataSetChanged();
             }
         });
     }
