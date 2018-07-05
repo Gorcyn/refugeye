@@ -1,7 +1,5 @@
 package com.refugeye.data.gson;
 
-import java.util.List;
-
 public class PictoJSON {
     private String resId;
     private String[] names;

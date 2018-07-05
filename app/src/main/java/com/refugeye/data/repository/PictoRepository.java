@@ -8,10 +8,13 @@ import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 import android.content.Context;
 import android.util.Log;
+
+import android.support.annotation.Nullable;
 
 import com.google.gson.Gson;
 
@@ -31,6 +34,7 @@ public class PictoRepository {
         this.context = context;
     }
 
+    @Nullable
     public List<Picto> getPictoList() {
         if (pictoList == null) {
             try {
@@ -77,5 +81,36 @@ public class PictoRepository {
             }
         }
         return pictoList;
+    }
+
+    @Nullable
+    public List<Picto> findWithNameContaining(@Nullable final String containing) {
+
+        // If containing is null, return the entire list
+        if (containing == null) {
+            return getPictoList();
+        }
+
+        List<Picto> pictoList = getPictoList();
+        if (pictoList == null) {
+            return null;
+        }
+
+        List<Picto> filteredPictoList = new ArrayList<>();
+
+        for (Picto picto : pictoList) {
+            List<String> nameList = picto.getNames();
+
+            boolean thisPictoWasAdded = false;
+            int index = 0;
+            while (!thisPictoWasAdded && index < nameList.size()) {
+                if (nameList.get(index).toLowerCase(Locale.getDefault()).contains(containing.toLowerCase(Locale.getDefault()))) {
+                    filteredPictoList.add(picto);
+                    thisPictoWasAdded = true;
+                }
+                index++;
+            }
+        }
+        return filteredPictoList;
     }
 }
