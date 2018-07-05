@@ -69,7 +69,7 @@ public class PictoRepository {
                             }
                             names += name;
                         }
-                        Log.e(getClass().getSimpleName(), pictoJSON.getResId()+": "+names);
+                        Log.d(getClass().getSimpleName(), pictoJSON.getResId()+": "+names);
 
                         Picto picto = new Picto(drawableMap.get(pictoJSON.getResId()), pictoJSON.getNames());
                         newPictoList.add(picto);
