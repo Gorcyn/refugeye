@@ -1,0 +1,3 @@
+<resources>
+    <integer name="picto_recycler_span">4</integer>
+</resources>

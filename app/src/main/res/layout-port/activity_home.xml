@@ -22,14 +22,17 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="left|center"
-            android:orientation="vertical">
+            android:layout_gravity="top|center"
+            android:orientation="horizontal">
 
             <ImageView
                 android:id="@+id/home_info"
                 android:layout_width="wrap_content"
-                android:padding="8dp"
                 android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_gravity="center"
                 android:src="@drawable/ic_info"/>
 
             <ImageView
@@ -37,16 +40,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_gravity="center"
                 android:src="@drawable/ic_clear"/>
 
             <ImageView
                 android:id="@+id/home_save_canvas"
                 android:layout_width="wrap_content"
-                android:padding="8dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="left|bottom"
-                android:layout_marginTop="24dp"
+                android:padding="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_gravity="center"
                 android:src="@drawable/ic_save"/>
 
         </LinearLayout>
@@ -54,23 +60,24 @@
 
     <com.refugeye.widget.SwipeView
         android:id="@id/sliding_pannel"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="end"
-        android:orientation="horizontal">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
 
         <ImageView
             android:id="@+id/toggle_drawer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginRight="10dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:rotation="90"
             android:padding="16dp"
             android:src="@drawable/ic_arrow" />
 
         <LinearLayout
-            android:layout_width="200dp"
-            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
             android:background="@color/orange"
             android:orientation="vertical">
 
@@ -96,8 +103,8 @@
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/home_picto_recycler"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
                 app:layoutManager="android.support.v7.widget.GridLayoutManager"
                 app:spanCount="@integer/picto_recycler_span"
                 tools:listitem="@layout/r_picto" />
@@ -106,10 +113,10 @@
     </com.refugeye.widget.SwipeView>
 
     <include layout="@layout/success_overlay"
-             android:layout_gravity="center"
-             android:layout_height="wrap_content"
-             android:visibility="gone"
-             android:layout_width="wrap_content"
-             android:id="@+id/success_overlay" />
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:id="@+id/success_overlay" />
 
 </FrameLayout>

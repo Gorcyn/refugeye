@@ -3,4 +3,6 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="about_text">16sp</dimen>
+
+    <integer name="picto_recycler_span">1</integer>
 </resources>
