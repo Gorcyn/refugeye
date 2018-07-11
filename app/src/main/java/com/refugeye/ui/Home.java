@@ -40,7 +40,6 @@ import com.refugeye.ui.pictoList.PictoListAdapter;
 import com.refugeye.widget.DrawingView;
 
 public class Home extends AppCompatActivity {
-
     private static final int PERMISSION_REQUEST_WRITE_EXTERNAL = 0;
 
     //region UI
@@ -62,10 +61,10 @@ public class Home extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_home);
 
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
-        setContentView(R.layout.activity_home);
         drawingView = findViewById(R.id.home_drawing_view);
 
         infoButton = findViewById(R.id.home_info);
@@ -79,6 +78,7 @@ public class Home extends AppCompatActivity {
         pictoRecycler.setAdapter(pictoListAdapter);
 
         viewModel = ViewModelProviders.of(this).get(HomeViewModel.class);
+        getLifecycle().addObserver(viewModel);
         viewModel.getSearchText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String searchText) {
@@ -218,7 +218,7 @@ public class Home extends AppCompatActivity {
     }
 
     private void saveToGallery() {
-        BitmapHelper.saveToGallery(Home.this, drawingView.getBitmap());
+        BitmapHelper.saveToGallery(this, viewModel.getDrawingBitmap().getValue());
 
         successOverlay.setVisibility(View.VISIBLE);
         successOverlay.setAlpha(1.0f);

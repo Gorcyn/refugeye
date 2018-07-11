@@ -159,13 +159,18 @@ public class DrawingView extends View {
                 drawCanvas = new Canvas(canvasBitmap);
                 invalidate();
 
-                Bitmap trimmedBitmap = BitmapHelper.trimBitmap(previousBitmap);
-                if (trimmedBitmap.getWidth() > getWidth() || trimmedBitmap.getHeight() > getHeight()) {
-                    trimmedBitmap = BitmapHelper.resizeBitmap(trimmedBitmap, getWidth(), getHeight());
+                if (previousBitmap.getWidth() == getWidth() && previousBitmap.getHeight() == getHeight()) {
+                    // Put it back as it was
+                    drawCanvas.drawBitmap(previousBitmap, 0, 0, canvasPaint);
+                } else {
+                    Bitmap trimmedBitmap = BitmapHelper.trimBitmap(previousBitmap);
+                    if (trimmedBitmap.getWidth() > getWidth() || trimmedBitmap.getHeight() > getHeight()) {
+                        trimmedBitmap = BitmapHelper.resizeBitmap(trimmedBitmap, getWidth(), getHeight());
+                    }
+                    float left = (getWidth() - trimmedBitmap.getWidth()) / 2;
+                    float top = (getHeight() - trimmedBitmap.getHeight()) / 2;
+                    drawCanvas.drawBitmap(trimmedBitmap, left, top, canvasPaint);
                 }
-                float left = (getWidth() - trimmedBitmap.getWidth()) / 2;
-                float top = (getHeight() - trimmedBitmap.getHeight()) / 2;
-                drawCanvas.drawBitmap(trimmedBitmap, left, top, canvasPaint);
                 invalidate();
             }
         }, 100);
