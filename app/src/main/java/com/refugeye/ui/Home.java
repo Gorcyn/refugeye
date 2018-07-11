@@ -1,8 +1,6 @@
 package com.refugeye.ui;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 import android.Manifest;
 import android.content.Context;
@@ -21,6 +19,8 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import android.arch.lifecycle.Observer;
+import android.arch.lifecycle.ViewModelProviders;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
@@ -31,9 +31,9 @@ import android.support.v7.widget.RecyclerView;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 import com.refugeye.R;
+import com.refugeye.viewmodels.HomeViewModel;
 import com.refugeye.widget.SwipeView;
 import com.refugeye.data.model.Picto;
-import com.refugeye.data.repository.PictoRepository;
 import com.refugeye.helper.BitmapHelper;
 import com.refugeye.ui.about.About;
 import com.refugeye.ui.pictoList.PictoListAdapter;
@@ -43,15 +43,21 @@ public class Home extends AppCompatActivity {
 
     private static final int PERMISSION_REQUEST_WRITE_EXTERNAL = 0;
 
+    //region UI
     private DrawingView drawingView;
-    private EditText search;
-    private SwipeView swipeView;
+
+    private View infoButton;
+    private View clearCanvasButton;
+    private View saveCanvasButton;
     private View successOverlay;
 
-    private PictoRepository repository;
-
+    private SwipeView swipeView;
+    private EditText search;
     private RecyclerView pictoRecycler;
-    private PictoListAdapter pictoListAdapter;
+    private PictoListAdapter pictoListAdapter = new PictoListAdapter();
+    //endregion
+
+    HomeViewModel viewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,51 +66,91 @@ public class Home extends AppCompatActivity {
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
         setContentView(R.layout.activity_home);
-
-        repository = new PictoRepository(this);
-        pictoListAdapter = new PictoListAdapter();
-
         drawingView = findViewById(R.id.home_drawing_view);
-        drawingView.setupDrawing();
+
+        infoButton = findViewById(R.id.home_info);
+        clearCanvasButton = findViewById(R.id.home_clear_canvas);
+        saveCanvasButton = findViewById(R.id.home_save_canvas);
+        successOverlay = findViewById(R.id.success_overlay);
 
         swipeView = findViewById(R.id.sliding_pannel);
-
+        search = findViewById(R.id.home_search);
         pictoRecycler = findViewById(R.id.home_picto_recycler);
-
-        List<Picto> pictoList = repository.getPictoList();
-        if (pictoList != null) {
-            pictoListAdapter.setPictoList(pictoList);
-        }
         pictoRecycler.setAdapter(pictoListAdapter);
 
-        findViewById(R.id.home_info).setOnClickListener(new View.OnClickListener() {
+        viewModel = ViewModelProviders.of(this).get(HomeViewModel.class);
+        viewModel.getSearchText().observe(this, new Observer<String>() {
+            @Override
+            public void onChanged(@Nullable String searchText) {
+                if (!search.getText().toString().equals(searchText)) {
+                    search.clearFocus();
+                    search.setText(searchText);
+                }
+            }
+        });
+        viewModel.getPictoList().observe(this, new Observer<List<Picto>>() {
+            @Override
+            public void onChanged(@Nullable List<Picto> pictos) {
+                pictoListAdapter.setPictoList(pictos);
+                pictoListAdapter.notifyDataSetChanged();
+            }
+        });
+        viewModel.getDrawingBitmap().observe(this, new Observer<Bitmap>() {
+            @Override
+            public void onChanged(@Nullable Bitmap bitmap) {
+                drawingView.restoreDrawing(bitmap);
+            }
+        });
+        viewModel.isSwipeViewOpened().observe(this, new Observer<Boolean>() {
+            @Override
+            public void onChanged(@Nullable Boolean isSwipeViewOpened) {
+                boolean opened = true;
+                if (Boolean.FALSE.equals(isSwipeViewOpened)) {
+                    opened = false;
+                }
+                swipeView.setOpened(opened);
+            }
+        });
+    }
+
+    @Override
+    protected void onPostCreate(@Nullable Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+
+        infoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 getSupportFragmentManager().beginTransaction().add(R.id.drawer_layout, new About()).commit();
             }
         });
 
-        findViewById(R.id.home_clear_canvas).setOnClickListener(new View.OnClickListener() {
+        clearCanvasButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                drawingView.reset();
+                viewModel.setDrawingBitmap(null);
             }
         });
 
-        successOverlay = findViewById(R.id.success_overlay);
-
-        findViewById(R.id.home_save_canvas).setOnClickListener(new View.OnClickListener() {
+        saveCanvasButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 tryToSaveToGallery();
             }
         });
-        search = findViewById(R.id.home_search);
-    }
 
-    @Override
-    protected void onPostCreate(@Nullable Bundle savedInstanceState) {
-        super.onPostCreate(savedInstanceState);
+        swipeView.setOnOpenedChangeListener(new SwipeView.OnOpenedChangeListener() {
+            @Override
+            public void onOpenedChange(boolean opened) {
+                viewModel.setSwipeViewOpened(opened);
+            }
+        });
+
+        drawingView.setOnDrawingChangeListener(new DrawingView.OnDrawingChangeListener() {
+            @Override
+            public void onDrawingChange(Bitmap drawing) {
+                viewModel.setDrawingBitmap(drawing);
+            }
+        });
 
         drawingView.setOnDragListener(new View.OnDragListener() {
             @Override
@@ -118,11 +164,10 @@ public class Home extends AppCompatActivity {
                         bitmap = Bitmap.createScaledBitmap(bitmap, bitmap.getWidth() * 2, bitmap.getHeight() * 2, false);
                         drawingView.addBitmap(bitmap, event.getX(), event.getY());
                     }
-                    search.setText(null);
-                    filterPictoList(search.getText().toString(), false);
+                    viewModel.setSearchText(null);
                 }
                 if (event.getAction() == DragEvent.ACTION_DRAG_STARTED) {
-                    swipeView.close(0);
+                    viewModel.setSwipeViewOpened(false);
                     InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
                     if (imm != null) {
                         imm.hideSoftInputFromWindow(search.getWindowToken(), 0);
@@ -142,7 +187,7 @@ public class Home extends AppCompatActivity {
                         imm.hideSoftInputFromWindow(search.getWindowToken(), 0);
                     }
                     search.clearFocus();
-                    filterPictoList(search.getText().toString(), false);
+                    viewModel.setSearchText(search.getText().toString());
                     return true;
                 }
                 return false;
@@ -160,54 +205,16 @@ public class Home extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
-                String text = search.getText().toString().toLowerCase(Locale.getDefault());
-                filterPictoList(text, true);
+                if (search.hasFocus()) {
+                    viewModel.setSearchText(search.getText().toString());
+                }
             }
         });
     }
 
     @Override
-    protected void onPause() {
-        super.onPause();
-        swipeView.onPause();
-        drawingView.onPause();
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        swipeView.onResume();
-        drawingView.onResume();
-    }
-
-    @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
-    }
-
-    /**
-     * Filter picto list
-     *
-     * @param search String
-     * @param userIsTyping boolean
-     */
-    private void filterPictoList(String search, boolean userIsTyping) {
-        List<Picto> pictoList = null;
-        // If input is empty, present nothing until something is typed
-        if (!search.isEmpty()) {
-            pictoList = repository.findWithNameContaining(search);
-        }
-
-        // But present everything if search input is empty and keyboard away
-        if (!userIsTyping && pictoList == null) {
-            pictoList = repository.getPictoList();
-        }
-
-        if (pictoList == null) {
-            pictoList = new ArrayList<>();
-        }
-        pictoListAdapter.setPictoList(pictoList);
-        pictoListAdapter.notifyDataSetChanged();
     }
 
     private void saveToGallery() {

@@ -9,11 +9,9 @@ import java.util.Locale;
 
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Matrix;
-import android.os.Environment;
 import android.provider.MediaStore;
 import android.util.Log;
 
@@ -74,7 +72,39 @@ public class BitmapHelper {
             }
         }
         Log.i(TAG, "x: " + firstX + "; y: " + firstY + "; width: " + (lastX - firstX) + "; height: " + (lastY - firstY));
-        return Bitmap.createBitmap(source, firstX, firstY, lastX - firstX, lastY - firstY);
+        Bitmap trimmed = Bitmap.createBitmap(source, firstX, firstY, lastX - firstX, lastY - firstY);
+        source.recycle();
+        return trimmed;
+    }
+
+    /**
+     * Resize bitmap
+     *
+     * @param source Bitmap
+     * @param maxWidth float
+     * @param maxHeight float
+     *
+     * @return Bitmap
+     */
+    public static Bitmap resizeBitmap(Bitmap source, int maxWidth, int maxHeight) {
+
+        if (maxWidth <= 0 || maxHeight <= 0) {
+            return source;
+        }
+
+        float ratioBitmap = (float) source.getWidth() / (float) source.getHeight();
+        float ratioMax = (float) maxWidth / (float) maxHeight;
+
+        int finalWidth = maxWidth;
+        int finalHeight = maxHeight;
+        if (ratioMax > ratioBitmap) {
+            finalWidth = (int) ((float) maxHeight * ratioBitmap);
+        } else {
+            finalHeight = (int) ((float) maxWidth / ratioBitmap);
+        }
+        Bitmap resized = Bitmap.createScaledBitmap(source, finalWidth, finalHeight, true);
+        source.recycle();
+        return resized;
     }
 
     /**
@@ -85,7 +115,7 @@ public class BitmapHelper {
      * @return File
      */
     @Nullable
-    public static File saveToFile(Context context, Bitmap source, String fileName) {
+    private static File saveToFile(Context context, Bitmap source, String fileName) {
         try {
             File file = new File(context.getFilesDir(), fileName);
             if ((file.exists() && file.delete()) || file.createNewFile()) {
@@ -99,21 +129,6 @@ public class BitmapHelper {
             exception.printStackTrace();
         }
         return null;
-    }
-
-    /**
-     * Load bitmap from file
-     *
-     * @param context Context
-     * @param fileName String
-     *
-     * @return Bitmap
-     */
-    @Nullable
-    public static Bitmap loadFromFile(Context context, String fileName) {
-        File file = new File(context.getFilesDir(), fileName);
-        Log.d(TAG, "loadFromFile: " + file.getAbsolutePath());
-        return BitmapFactory.decodeFile(file.getAbsolutePath());
     }
 
     /**

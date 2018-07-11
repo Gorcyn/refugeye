@@ -1,15 +1,12 @@
 package com.refugeye.widget;
 
-import java.io.File;
-
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Path;
-import android.os.Bundle;
 import android.os.Handler;
-import android.os.Parcelable;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
@@ -22,8 +19,11 @@ import com.refugeye.helper.BitmapHelper;
 
 public class DrawingView extends View {
 
-    private static final String STATE_SELF = "self";
-    private static final String STATE_CANVAS = "canvasBitmap";
+    public interface OnDrawingChangeListener {
+        void onDrawingChange(Bitmap drawing);
+    }
+
+    final Handler handler = new Handler();
 
     private Path drawPath;
     private Paint canvasPaint;
@@ -31,9 +31,12 @@ public class DrawingView extends View {
     private Paint drawPaint;
     private Canvas drawCanvas;
 
-    private boolean restored = false;
+    @Nullable
+    private OnDrawingChangeListener onDrawingChangeListener;
 
-    Handler handler = new Handler();
+    public void setOnDrawingChangeListener(@Nullable OnDrawingChangeListener listener) {
+        onDrawingChangeListener = listener;
+    }
 
     public Bitmap getBitmap() {
         return canvasBitmap;
@@ -41,75 +44,20 @@ public class DrawingView extends View {
 
     public DrawingView(Context context) {
         super(context);
+        setupDrawing();
     }
 
     public DrawingView(Context context, AttributeSet attrs) {
         super(context, attrs);
+        setupDrawing();
     }
 
     public DrawingView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        setupDrawing();
     }
 
-    @Nullable
-    @Override
-    protected Parcelable onSaveInstanceState() {
-
-        Bundle state = new Bundle();
-        state.putParcelable(STATE_SELF, super.onSaveInstanceState());
-
-        File file = BitmapHelper.saveToFile(getContext(), canvasBitmap, "state.png");
-        if (file != null) {
-            state.putString(STATE_CANVAS, file.getAbsolutePath());
-        }
-        return state;
-    }
-
-    @Override
-    protected void onRestoreInstanceState(Parcelable state) {
-        if (state instanceof Bundle) {
-            Bundle stateBundle = (Bundle) state;
-            super.onRestoreInstanceState(stateBundle.getParcelable(STATE_SELF));
-
-            String path = stateBundle.getString(STATE_CANVAS);
-            if (path != null) {
-                handler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        Bitmap previousBitmap = BitmapHelper.loadFromFile(getContext(), "state.png");
-                        if (previousBitmap != null) {
-                            restoreDrawing(BitmapHelper.trimBitmap(previousBitmap));
-                        }
-                    }
-                }, 100);
-            }
-        } else {
-            super.onRestoreInstanceState(state);
-        }
-    }
-
-    public void onPause() {
-        BitmapHelper.saveToFile(getContext(), canvasBitmap, "state.png");
-    }
-
-    public void onResume() {
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Bitmap previousBitmap = BitmapHelper.loadFromFile(getContext(), "state.png");
-                restoreDrawing(previousBitmap);
-            }
-        }, 100);
-
-    }
-
-    @Override
-    protected void onFinishInflate() {
-        super.onFinishInflate();
-        setSaveEnabled(true);
-    }
-
-    public void setupDrawing() {
+    private void setupDrawing() {
         drawPath = new Path();
         drawPaint = new Paint();
 
@@ -140,6 +88,7 @@ public class DrawingView extends View {
         canvas.drawPath(drawPath, drawPaint);
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         float touchX = event.getX();
@@ -170,36 +119,55 @@ public class DrawingView extends View {
         invalidate();
     }
 
-    public void reset() {
-        canvasBitmap = Bitmap.createBitmap(getWidth(), getHeight(), Bitmap.Config.ARGB_8888);
-        drawCanvas = new Canvas(canvasBitmap);
-        invalidate();
+    @Override
+    public void invalidate() {
+        super.invalidate();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                if (onDrawingChangeListener != null) {
+                    onDrawingChangeListener.onDrawingChange(canvasBitmap);
+                }
+            }
+        }, 100);
     }
 
-    private void restoreDrawing(Bitmap previousBitmap) {
-        if (restored) {
-            restored = false;
-            return;
-        }
-        int orientation = OrientationHelper.VERTICAL;
-        if (getWidth() >= getHeight()) {
-            orientation = OrientationHelper.HORIZONTAL;
-        }
-        if (previousBitmap != null) {
-            setupDrawing();
-            if (orientation == OrientationHelper.VERTICAL) {
-                canvasBitmap = Bitmap.createBitmap(getWidth(), getHeight(), Bitmap.Config.ARGB_8888);
-            } else {
-                canvasBitmap = Bitmap.createBitmap(getWidth(), getHeight(), Bitmap.Config.ARGB_8888);
-            }
-            drawCanvas = new Canvas(canvasBitmap);
-            invalidate();
+    public void restoreDrawing(@Nullable final Bitmap previousBitmap) {
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
 
-            float left = (getWidth() - previousBitmap.getWidth()) / 2;
-            float top = (getHeight() - previousBitmap.getHeight()) / 2;
-            drawCanvas.drawBitmap(previousBitmap, left, top, canvasPaint);
-            invalidate();
-            restored = true;
-        }
+                if (previousBitmap == canvasBitmap) {
+                    return;
+                }
+                if (previousBitmap == null) {
+                    canvasBitmap = Bitmap.createBitmap(getWidth(), getHeight(), Bitmap.Config.ARGB_8888);
+                    drawCanvas = new Canvas(canvasBitmap);
+                    invalidate();
+                    return;
+                }
+                int orientation = OrientationHelper.VERTICAL;
+                if (getWidth() >= getHeight()) {
+                    orientation = OrientationHelper.HORIZONTAL;
+                }
+                setupDrawing();
+                if (orientation == OrientationHelper.VERTICAL) {
+                    canvasBitmap = Bitmap.createBitmap(getWidth(), getHeight(), Bitmap.Config.ARGB_8888);
+                } else {
+                    canvasBitmap = Bitmap.createBitmap(getWidth(), getHeight(), Bitmap.Config.ARGB_8888);
+                }
+                drawCanvas = new Canvas(canvasBitmap);
+                invalidate();
+
+                Bitmap trimmedBitmap = BitmapHelper.trimBitmap(previousBitmap);
+                if (trimmedBitmap.getWidth() > getWidth() || trimmedBitmap.getHeight() > getHeight()) {
+                    trimmedBitmap = BitmapHelper.resizeBitmap(trimmedBitmap, getWidth(), getHeight());
+                }
+                float left = (getWidth() - trimmedBitmap.getWidth()) / 2;
+                float top = (getHeight() - trimmedBitmap.getHeight()) / 2;
+                drawCanvas.drawBitmap(trimmedBitmap, left, top, canvasPaint);
+                invalidate();
+            }
+        }, 100);
     }
 }
